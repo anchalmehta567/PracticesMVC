@@ -1,0 +1,57 @@
+﻿@model MVCPractice.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<html>
+<body>
+    <div>
+        <h1>Passs data using Parameter</h1>
+
+        <section>
+            @using (Html.BeginForm("PostingUsingParameter", "HOME"))
+            {
+                <input type="text" name="firtsName" /><br />
+                <input type="text" name="lastName" /><br />
+                <input type="submit" value="Click me " />
+            }
+        </section>
+        <hr />
+        <h1>Passs data using Request</h1>
+
+        <section>
+            @using (Html.BeginForm("PostingUsingRequest", "HOME"))
+            {
+                <input type="text" name="firtsName" /><br />
+                <input type="text" name="lastName" /><br />
+                <input type="submit" value="Click me " />
+            }
+        </section>
+        <hr />
+        <h1>Passs data using Form Collection</h1>
+
+        <section>
+            @using (Html.BeginForm("PostingUsingFormCollection", "HOME"))
+            {
+                <input type="text" name="firtsName" /><br />
+                <input type="text" name="lastName" /><br />
+                <input type="submit" value="Click me " />
+            }
+        </section>
+        <hr />
+        <h1>Passs data using Binding</h1>
+        <section>
+            @using (Html.BeginForm("PostingUsingStronglyBinding", "HOME",FormMethod.Post))
+            {
+                @Html.TextBoxFor(x => x.firstName)<br />
+                @Html.TextBoxFor(x => x.lastName)<br />
+
+                <input type="submit" value="Click me " />
+            }
+        </section>
+
+    </div>
+</body>
+</html>
