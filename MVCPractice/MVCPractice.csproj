@@ -109,6 +109,18 @@
       <DependentUpon>BOOK.edmx</DependentUpon>
       <LastGenOutput>BOOK.cs</LastGenOutput>
     </Content>
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +129,8 @@
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoutingController.cs" />
+    <Compile Include="Controllers\ValidationsController.cs" />
+    <Compile Include="EmployeeeDataCustomValidation.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +151,7 @@
       <DependentUpon>BOOK.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\BookDB.cs" />
+    <Compile Include="Models\DataEmployee.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\readingbook.cs">
@@ -168,6 +183,9 @@
     <Content Include="Views\Book\Delete.cshtml" />
     <Content Include="Views\Helper\Index.cshtml" />
     <Content Include="Views\Helper\GetEmployee.cshtml" />
+    <Content Include="Views\Validations\Index.cshtml" />
+    <Content Include="Views\Validations\SubmitData.cshtml" />
+    <Content Include="Views\Validations\CustomValidation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

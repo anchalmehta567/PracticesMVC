@@ -1,0 +1,38 @@
+﻿@model  MVCPractice.Models.DataEmployee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CustomValidation</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("CustomValidation", "Validations", FormMethod.Post))
+        {
+
+            @Html.Label("First Name")
+            @Html.TextBoxFor(x => x.FirstName)<br /><br />
+            @Html.ValidationMessageFor(x => x.FirstName)<br />
+
+            @Html.Label("Last Name")
+            @Html.TextBoxFor(x => x.LastName)<br /><br />
+            @Html.ValidationMessageFor(x => x.LastName)<br />
+
+
+            @Html.Label("Email")
+            @Html.TextBoxFor(x => x.Email)<br /><br />
+            @Html.ValidationMessageFor(x => x.Email)<br />
+
+            @Html.Label("Age")
+            @Html.EditorFor(x => x.Age)<br /><br />
+            @Html.ValidationMessageFor(x => x.Age)<br />
+            <input type="submit" value="Click me" />
+        }
+    </div>
+</body>
+</html>
