@@ -4,7 +4,27 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BookDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BookDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Details" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employee_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="AddressId" Type="int" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="readingbook">
           <Key>
             <PropertyRef Name="id" />
@@ -20,11 +40,28 @@
           <Property Name="other_details" Type="varchar" MaxLength="50" />
           <Property Name="iby_email" Type="varchar(max)" />
         </EntityType>
+        <Association Name="FK_Employee_tbl_Address_tbl">
+          <End Role="Address_tbl" Type="Self.Address_tbl" Multiplicity="0..1" />
+          <End Role="Employee_tbl" Type="Self.Employee_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address_tbl">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Employee_tbl">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="BookDBModelStoreContainer">
+          <EntitySet Name="Address_tbl" EntityType="Self.Address_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee_tbl" EntityType="Self.Employee_tbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="readingbook" EntityType="Self.readingbook" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Employee_tbl_Address_tbl" Association="Self.FK_Employee_tbl_Address_tbl">
+            <End Role="Address_tbl" EntitySet="Address_tbl" />
+            <End Role="Employee_tbl" EntitySet="Employee_tbl" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BookDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -45,7 +82,47 @@
         </EntityType>
         <EntityContainer Name="BookDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="readingbooks" EntityType="Self.readingbook" />
+          <EntitySet Name="Address_tbl" EntityType="BookDBModel.Address_tbl" />
+          <EntitySet Name="Employee_tbl" EntityType="BookDBModel.Employee_tbl" />
+          <AssociationSet Name="FK_Employee_tbl_Address_tbl" Association="BookDBModel.FK_Employee_tbl_Address_tbl">
+            <End Role="Address_tbl" EntitySet="Address_tbl" />
+            <End Role="Employee_tbl" EntitySet="Employee_tbl" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Address_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee_tbl" Relationship="BookDBModel.FK_Employee_tbl_Address_tbl" FromRole="Address_tbl" ToRole="Employee_tbl" />
+        </EntityType>
+        <EntityType Name="Employee_tbl">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AddressId" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Address_tbl" Relationship="BookDBModel.FK_Employee_tbl_Address_tbl" FromRole="Employee_tbl" ToRole="Address_tbl" />
+        </EntityType>
+        <Association Name="FK_Employee_tbl_Address_tbl">
+          <End Type="BookDBModel.Address_tbl" Role="Address_tbl" Multiplicity="0..1" />
+          <End Type="BookDBModel.Employee_tbl" Role="Employee_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address_tbl">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Employee_tbl">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -68,6 +145,28 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Address_tbl">
+            <EntityTypeMapping TypeName="BookDBModel.Address_tbl">
+              <MappingFragment StoreEntitySet="Address_tbl">
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee_tbl">
+            <EntityTypeMapping TypeName="BookDBModel.Employee_tbl">
+              <MappingFragment StoreEntitySet="Employee_tbl">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -82,7 +181,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

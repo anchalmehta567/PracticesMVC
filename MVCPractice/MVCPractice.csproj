@@ -126,6 +126,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\CrudOperationsController.cs" />
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoutingController.cs" />
@@ -135,6 +136,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\Address_tbl.cs">
+      <DependentUpon>BOOK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BOOK.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -153,7 +158,12 @@
     <Compile Include="Models\BookDB.cs" />
     <Compile Include="Models\DataEmployee.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\EmployeeRepositoryDBOperations.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Employee_tbl.cs">
+      <DependentUpon>BOOK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\readingbook.cs">
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
@@ -186,6 +196,10 @@
     <Content Include="Views\Validations\Index.cshtml" />
     <Content Include="Views\Validations\SubmitData.cshtml" />
     <Content Include="Views\Validations\CustomValidation.cshtml" />
+    <Content Include="Views\CrudOperations\Create.cshtml" />
+    <Content Include="Views\CrudOperations\GetAllRecords.cshtml" />
+    <Content Include="Views\CrudOperations\Details.cshtml" />
+    <Content Include="Views\CrudOperations\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

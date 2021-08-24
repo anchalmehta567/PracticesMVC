@@ -42,5 +42,6 @@ namespace MVCPractice.Controllers
            
             return "form Form collection   first name is :" +emp.firstName + " , last name is " + emp.lastName;
         }
+
     }
 }
