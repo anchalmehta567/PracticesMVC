@@ -8,13 +8,8 @@
 <body>
     <div>
         <h1>Hello</h1>
-        <!--<div>
-            <h2>id</h2>- <h2 id="stdId"></h2>
-            <h2>name</h2>- <h2 id="stdname"></h2>
-            <h2>Email</h2>- <h2 id="stdemail"></h2>
-
-        </div>-->
-       @* <label id="lbl"></label>
+        
+        @* <label id="lbl"></label>
         <input type="text" id="textbox"/>
        *@ 
         @*<input type="button"  onclick="BtnClick()" value="click me" />
@@ -47,7 +42,8 @@
         var Email = $("#stdEmail").val();
 
         var obj = {
-            id: id, name: name,
+            id: id,
+            name: name,
             Email: Email
         }
         SubmitForm(obj);
@@ -56,9 +52,11 @@
     {
         $.ajax({
             url: "/Ajax/AddStudent",
-            method: "POSt",
+            method: "POST",
             data:obj,
-            success: function (data) {
+            success: function (data)
+            {
+              
                 alert(data);
                 @*data = JSON.parse(data);
                 $("#stdId").text(data.id);
@@ -66,7 +64,8 @@
                 $("#stdemail").text(data.Email);
 *@
             },
-            error: function (err) {
+            error: function (err)
+            {
                 console.error(err);
             }
         })

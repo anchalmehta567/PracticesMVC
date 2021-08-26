@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ListofStudent";
+}
+
+@Ajax.ActionLink("Country List", "Country", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "Listcontainer"
+
+})
+
+@Ajax.ActionLink("State List", "State", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "Listcontainer"
+
+})
+@Ajax.ActionLink("City List", "City", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "Listcontainer"
+
+})
+
+
+
+<div id="Listcontainer">
+
+</div>

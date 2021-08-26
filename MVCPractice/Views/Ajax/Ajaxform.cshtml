@@ -1,0 +1,43 @@
+﻿@model MVCPractice.Models.StudentData 
+@{
+    ViewBag.Title = "Ajaxform";
+}
+<div>
+
+</div>
+@using (Ajax.BeginForm("Ajaxform", new AjaxOptions() 
+{ 
+    OnSuccess="fnSucess",
+    OnFailure="fnFailure",
+    HttpMethod="POST" 
+})) 
+{
+<div>
+
+    @Html.EditorFor(x => x.id)
+    <br />
+    <br />
+    @Html.EditorFor(x => x.name)
+    <br />
+    <br />
+    @Html.EditorFor(x => x.Email)
+    <br />
+    <br />
+
+    <input type="submit" value="Click me"/>
+
+</div>
+}
+<script>
+    function fnSucess(data)
+    {
+        console.log(data);
+        alert("Hello from Sucess");
+    }
+    function fnFailure(err)
+    {
+        console.error(err);
+        alert("Hello from fnFailure");
+
+    }
+</script>

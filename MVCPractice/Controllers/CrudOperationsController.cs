@@ -13,8 +13,6 @@ namespace MVCPractice.Controllers
         public CrudOperationsController()
         {
             repository = new EmployeeRepositoryDBOperations();
-
-
         }
         // GET: CrudOperations
         public ActionResult Create()
