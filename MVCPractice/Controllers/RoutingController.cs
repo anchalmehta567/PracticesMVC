@@ -7,11 +7,13 @@ using MVCPractice.Models;
 
 namespace MVCPractice.Controllers
 {
+    /*[RoutePrefix("students")]
+    [Route("(action=GetAllStudent)")]///default action*/
     public class RoutingController : Controller
     {
 
         /*https://localhost:44305/students*/
-
+        [Route("students")]
         public ActionResult GetAllStudent() {
             var students = Students();
 
@@ -19,7 +21,7 @@ namespace MVCPractice.Controllers
         }
 
         // Apply Concept of Attribute Routing 
-        
+
         [Route("students/{id}")]
         public ActionResult GetStudent(int id)
         {
@@ -27,8 +29,9 @@ namespace MVCPractice.Controllers
 
             return View(students);
         }
-        
+
         [Route("students/{id}/address")]
+
         public ActionResult GetStudentAdress(int id) 
         {
             var studentAddres = Students().Where(x => x.id ==id).Select(x => x.Address).FirstOrDefault();

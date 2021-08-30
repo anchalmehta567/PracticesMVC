@@ -14,6 +14,7 @@ namespace MVCPractice.Controllers
         {
             return View();
         }
+        public ActionResult Test() { return View(); }
         public JsonResult GetStudent()
         {
             StudentData std = new StudentData()

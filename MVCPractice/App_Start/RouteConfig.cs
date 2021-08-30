@@ -18,14 +18,14 @@ namespace MVCPractice
             routes.MapMvcAttributeRoutes();
 
 
-            routes.MapRoute(
+            /*routes.MapRoute(
                 name:"allstudents",
                 url:"students",
-                defaults: new{ Controller="Routing",action= "GetAllStudent" }
+                 new{ Controller="Routing",action= "GetAllStudent" }
                 );
 
             // Conventional routing 
-            /*routes.MapRoute(
+            *//*routes.MapRoute(
                 name: "studentAdress",
                 url: "students/Address/{id}",
                 defaults: new { Controller = "Routing", action = "GetStudentAdress" }
@@ -34,11 +34,12 @@ namespace MVCPractice
                name: "students",
                url: "students/{id}",
                defaults: new { Controller = "Routing", action = "GetStudent" }
-               ); */
+               ); *//*
+          */
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+              name: "Default",
+              url: "{controller}/{action}/{id}",
+              defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

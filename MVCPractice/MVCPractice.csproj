@@ -177,6 +177,8 @@
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CrudOperationsController.cs" />
+    <Compile Include="Controllers\Filter\CacheFilterController.cs" />
+    <Compile Include="Controllers\Filter\HandleErrorFilterController.cs" />
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoutingController.cs" />
@@ -254,6 +256,9 @@
     <Content Include="Views\Ajax\Index.cshtml" />
     <Content Include="Views\Ajax\Ajaxform.cshtml" />
     <Content Include="Views\Ajax\ListofStudent.cshtml" />
+    <Content Include="Views\CacheFilter\CacheAtClientSide.cshtml" />
+    <Content Include="Views\CacheFilter\CacheAtServerSide.cshtml" />
+    <Content Include="Views\CacheFilter\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
