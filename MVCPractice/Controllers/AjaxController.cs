@@ -9,7 +9,7 @@ namespace MVCPractice.Controllers
 {
     public class AjaxController : Controller
     {
-        // GET: Ajax
+       [AllowAnonymous] // GET: Ajax
         public ActionResult Index()
         {
             return View();

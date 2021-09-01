@@ -7,7 +7,7 @@ using MVCPractice.Models;
 
 namespace MVCPractice.Controllers
 {
-    [Authorize]
+    
     public class CrudOperationsController : Controller
     {
         EmployeeRepositoryDBOperations repository = null;

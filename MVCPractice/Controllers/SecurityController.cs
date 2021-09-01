@@ -8,8 +8,8 @@ using System.Web.Security;
 
 namespace MVCPractice.Controllers
 {
-/*    [AllowAnonymous]
-*/
+    [AllowAnonymous]
+
     public class SecurityController : Controller
     {
         public ActionResult Registration()
@@ -65,7 +65,7 @@ namespace MVCPractice.Controllers
             {
                 return View();
             }
-
+        
             [HttpPost]
         public ActionResult Login(Registration_tbl objuser)
         {
