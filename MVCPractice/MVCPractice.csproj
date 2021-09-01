@@ -225,7 +225,11 @@
     </Compile>
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentData.cs" />
+    <Compile Include="Models\UserRole.cs">
+      <DependentUpon>BOOK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

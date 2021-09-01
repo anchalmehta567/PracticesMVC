@@ -25,9 +25,9 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">@Html.ActionLink("Create", "Create", "CrudOperations", null, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Details", "Details", "Helper", null, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Edit", "Edit", "Home", null, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("GetAllRecords", "GetAllRecords", "Routing", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Details", "Details", "CrudOperations", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Edit", "Edit", "CrudOperations", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("GetAllRecords", "GetAllRecords", "CrudOperations", null, new { @class = "nav-link" })</li>
                     }
 
                 </ul>

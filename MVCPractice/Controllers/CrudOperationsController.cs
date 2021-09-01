@@ -7,7 +7,7 @@ using MVCPractice.Models;
 
 namespace MVCPractice.Controllers
 {
-    
+    [Authorize]
     public class CrudOperationsController : Controller
     {
         EmployeeRepositoryDBOperations repository = null;
@@ -16,11 +16,13 @@ namespace MVCPractice.Controllers
             repository = new EmployeeRepositoryDBOperations();
         }
         // GET: CrudOperations
+        [Authorize(Roles ="Admin , Customer")]
         public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin , Customer")]
         public ActionResult Create(EmployeeModel model)
         {
             if (ModelState.IsValid) 
@@ -45,6 +47,7 @@ namespace MVCPractice.Controllers
             var employee = repository.GetEmployees(id);
             return View(employee);
         }
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id ) 
         {
 

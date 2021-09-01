@@ -14,9 +14,18 @@ namespace MVCPractice.Models
     
     public partial class Registration_tbl
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Registration_tbl()
+        {
+            this.UserRole = new HashSet<UserRole>();
+        }
+    
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserRole> UserRole { get; set; }
     }
 }
