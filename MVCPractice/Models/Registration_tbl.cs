@@ -12,15 +12,11 @@ namespace MVCPractice.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee_tbl
+    public partial class Registration_tbl
     {
-        public int id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int UserId { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
-        public Nullable<int> AddressId { get; set; }
-        public string Code { get; set; }
-    
-        public virtual Address_tbl Address_tbl { get; set; }
+        public string password { get; set; }
     }
 }

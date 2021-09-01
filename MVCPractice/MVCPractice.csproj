@@ -182,6 +182,7 @@
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoutingController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\ValidationsController.cs" />
     <Compile Include="EmployeeeDataCustomValidation.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +218,9 @@
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\readingbook.cs">
+      <DependentUpon>BOOK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration_tbl.cs">
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
@@ -259,6 +263,8 @@
     <Content Include="Views\CacheFilter\CacheAtClientSide.cshtml" />
     <Content Include="Views\CacheFilter\CacheAtServerSide.cshtml" />
     <Content Include="Views\CacheFilter\Index.cshtml" />
+    <Content Include="Views\Security\Registration.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
