@@ -1,0 +1,95 @@
+[33mcommit 9ebc29ec0d58f05ebbd74f74a42832ce985f8d45[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 18:25:28 2021 +0530
+
+    Commits
+
+[33mcommit 29ecc217a43106fc1e2f3b4b9efe034d15fec18c[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 18:12:33 2021 +0530
+
+    Identity Framework
+
+[33mcommit 5fbebc32f2ea3d5f809b203d04ad26961b62f7c2[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mtmp[m[33m)[m
+Author: anchalmehta567 <49950601+anchalmehta567@users.noreply.github.com>
+Date:   Wed Sep 1 11:41:52 2021 +0530
+
+    Delete IdentityFramework directory
+
+[33mcommit 4793f7534e6d23d3c54dc3c7d8cfbd5560914068[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 11:37:27 2021 +0530
+
+    Commits
+
+[33mcommit 8fccf6d72ff9b54eec0910825e9024de6d300153[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 11:22:08 2021 +0530
+
+    Roles
+
+[33mcommit d634d9c53f4a45cc8eb9f4b90dff13e376a28952[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 10:31:58 2021 +0530
+
+    AllowAnoymous
+
+[33mcommit 9710ff86ee40fc407ee50765a1f67edb92fa30c1[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Sep 1 08:32:19 2021 +0530
+
+    Login and Signup
+
+[33mcommit 8fbecca9aa96acc8d7de06070365fb750307f5a4[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Mon Aug 30 10:10:19 2021 +0530
+
+    adding cache filter
+
+[33mcommit 52e7fa83b993a548b804db62adf671a47a482abd[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Thu Aug 26 08:44:59 2021 +0530
+
+    Ajax Operations
+
+[33mcommit d5cd9c0f85928847aa97a74a0f8f3e8b1bd63428[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Aug 25 10:24:32 2021 +0530
+
+    Basic of Ajax
+
+[33mcommit 6fb9d4d1bfdc6e7a59792bc2e451faf8c8e34899[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Wed Aug 25 00:27:39 2021 +0530
+
+    Performing Crud Operations
+
+[33mcommit be01b1677f6e8ce124a4144725d93169b64d1a77[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Tue Aug 24 10:34:46 2021 +0530
+
+    Adding Validations
+
+[33mcommit b687cce7fb39349b9765ea033305185cdd875885[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Fri Aug 20 16:56:22 2021 +0530
+
+    Adding Helper  controller
+
+[33mcommit f1de1a02ba33440a3787e760e71bfaeb24db9812[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Fri Aug 20 16:20:15 2021 +0530
+
+    adding new line
+
+[33mcommit de4383676ae56cfe03a5be902148be395e3cef3e[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Fri Aug 20 16:06:37 2021 +0530
+
+    intial commit
+
+[33mcommit 7d0e0d7f90f478cc43bcfdc5c4754798f95ebc3b[m
+Author: Aanchal Mehta <aanchal.mehta@nagarro.com>
+Date:   Fri Aug 20 15:25:35 2021 +0530
+
+    Add .gitignore and .gitattributes.
