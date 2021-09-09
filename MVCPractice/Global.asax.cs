@@ -11,9 +11,11 @@ namespace MVCPractice
     {
         protected void Application_Start()
         {
+
       /*      GlobalFilters.Filters.Add(new AuthorizeAttribute());
       */      AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            UnityConfig.RegisterComponents();
           /*  GlobalFilters.Filters.Add(new HandleErrorAttribute());*/
         }
     }

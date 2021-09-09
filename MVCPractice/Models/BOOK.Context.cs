@@ -30,5 +30,6 @@ namespace MVCPractice.Models
         public virtual DbSet<Employee_tbl> Employee_tbl { get; set; }
         public virtual DbSet<Registration_tbl> Registration_tbl { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
+        public virtual DbSet<tbl_Student> tbl_Student { get; set; }
     }
 }
