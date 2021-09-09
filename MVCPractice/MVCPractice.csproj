@@ -191,6 +191,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CrudOperationsController.cs" />
     <Compile Include="Controllers\Filter\CacheFilterController.cs" />
+    <Compile Include="Controllers\Filter\ErrorController.cs" />
     <Compile Include="Controllers\Filter\HandleErrorFilterController.cs" />
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -283,6 +284,8 @@
     <Content Include="Views\Security\Registration.cshtml" />
     <Content Include="Views\Security\Login.cshtml" />
     <Content Include="Views\Billing\Index.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
