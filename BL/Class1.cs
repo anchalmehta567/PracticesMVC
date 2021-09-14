@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MVCPractice.Models;
 
-namespace MVCPractice.Models
+namespace BL
 {
-   public  interface IStudentDe
+    public class Class1
     {
-        List<tbl_Student> GetAllStudents();
-
     }
 }

@@ -3,6 +3,7 @@ using Unity;
 using Unity.Mvc5;
 using MVCPractice.Models;
 using MVCPractice.Controllers;
+using BL;
 namespace MVCPractice
 {
     public static class UnityConfig
@@ -14,7 +15,7 @@ namespace MVCPractice
             // register all your components with the container here
             // it is NOT necessary to register your controllers
 
-            container.RegisterType<IStudentDe,StudentDAL>();
+          container.RegisterType<IEmployeeData,EmployeeData>();
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

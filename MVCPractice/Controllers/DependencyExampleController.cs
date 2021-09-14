@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVCPractice.Models;
+using BL;
 
 namespace MVCPractice.Controllers
 {
     public class DependencyExampleController : Controller
     {
+        private IEmployeeData _employee = null;
+        public DependencyExampleController(IEmployeeData _employee) 
+        {
+           this._employee = _employee;
+
+        }
         // GET: DependencyExample
         public ActionResult Index()
         {
-            StudentBLL obj = new StudentBLL(new StudentDAL());
-
-           
-            return View(obj.AllStudent());
-            
+            int count = _employee.GetallStudents();
+            return View();
         }
     }
 }

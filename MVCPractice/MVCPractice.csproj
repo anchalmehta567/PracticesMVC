@@ -244,7 +244,6 @@
     <Compile Include="Models\Employee_tbl.cs">
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\IStudentDe.cs" />
     <Compile Include="Models\readingbook.cs">
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
@@ -252,10 +251,7 @@
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\StudentBLL.cs" />
-    <Compile Include="Models\StudentDAL.cs" />
     <Compile Include="Models\StudentData.cs" />
-    <Compile Include="Models\StudentDe.cs" />
     <Compile Include="Models\tbl_Student.cs">
       <DependentUpon>BOOK.tt</DependentUpon>
     </Compile>
@@ -323,6 +319,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{d4cc25be-bdae-4584-9ace-8e6452d3bb97}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
