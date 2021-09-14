@@ -199,6 +199,7 @@
     <Compile Include="Areas\Sales\Controllers\HomeController.cs" />
     <Compile Include="Areas\Sales\HomeController.cs" />
     <Compile Include="Areas\Sales\SalesAreaRegistration.cs" />
+    <Compile Include="Controllers\ActionResultTypesController.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CrudOperationsController.cs" />
@@ -303,6 +304,10 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\DependencyExample\Index.cshtml" />
+    <Content Include="Views\ActionResultTypes\Index.cshtml" />
+    <Content Include="Views\ActionResultTypes\Testpartialview.cshtml" />
+    <Content Include="Views\ActionResultTypes\tetcontent.cshtml" />
+    <Content Include="Views\ActionResultTypes\testemptyresult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

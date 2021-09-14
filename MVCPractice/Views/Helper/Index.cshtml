@@ -21,3 +21,17 @@
         </tr>
     }
 </table>
+@*
+
+//Inline html whihc is used in same page if we delclare same mylist with diifrent variables so it print two times. 
+<ul>
+    //decleration
+    @helper mylist(string[] arr)
+    {
+        foreach (var data in arr) 
+        {
+        <li>@data</li>
+        }
+    }
+</ul>
+@mylist(new string[]{ "abc","xyz"})*@
