@@ -10,7 +10,7 @@ namespace MVCHandsOnPractice.Controllers.Filter
     public class HandleErrorFilterController : Controller
     {
         // GET: HandleErrorFilter
-     //   [HandleError]
+        //[HandleError]
         public ActionResult Index()
         {
             throw new Exception("This is a  exception");

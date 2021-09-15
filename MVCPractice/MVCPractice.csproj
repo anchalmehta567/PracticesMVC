@@ -308,6 +308,7 @@
     <Content Include="Views\ActionResultTypes\Testpartialview.cshtml" />
     <Content Include="Views\ActionResultTypes\tetcontent.cshtml" />
     <Content Include="Views\ActionResultTypes\testemptyresult.cshtml" />
+    <Content Include="Views\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

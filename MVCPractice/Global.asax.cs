@@ -16,7 +16,7 @@ namespace MVCPractice
       */      AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             UnityConfig.RegisterComponents();
-          /*  GlobalFilters.Filters.Add(new HandleErrorAttribute());*/
+          /*  GlobalFilters.Filters.Add(new HandleErrorAttribute(View="CustomError"));*/
         }
     }
 }
