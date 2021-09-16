@@ -36,6 +36,7 @@ namespace MVCPractice.Controllers
 
         // POST: Book/Create
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Create(readingbook read)
         {
             try

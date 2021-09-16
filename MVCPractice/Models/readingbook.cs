@@ -11,10 +11,12 @@ namespace MVCPractice.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.Web.Mvc;
     
     public partial class readingbook
     {
         public int id { get; set; }
+       // [AllowHtml]
         public string Title { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public string location { get; set; }

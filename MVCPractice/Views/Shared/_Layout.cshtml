@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    
+
 </head>
 <body>
     <div class="navbar navbar-expand-sm navbar-dark navbar-fixed-top bg-dark">
@@ -24,7 +24,14 @@
                     <li class="nav-item">@Html.ActionLink("Index", "Index", "Ajax", null, new { @class = "nav-link" })</li>
                     @if (User.Identity.IsAuthenticated)
                     {
+
+
+                        @*      @if (User.IsInRole("admin") || User.IsInRole("customer"))
+                            {
+                        *@
                         <li class="nav-item">@Html.ActionLink("Create", "Create", "CrudOperations", null, new { @class = "nav-link" })</li>
+
+
                         <li class="nav-item">@Html.ActionLink("Details", "Details", "CrudOperations", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Edit", "Edit", "CrudOperations", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("GetAllRecords", "GetAllRecords", "CrudOperations", null, new { @class = "nav-link" })</li>
@@ -59,6 +66,6 @@
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-
+    @Styles.Render("~/bundle/CSS")
 </body>
 </html>
