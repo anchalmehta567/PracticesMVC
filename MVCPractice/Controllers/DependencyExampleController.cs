@@ -9,12 +9,17 @@ namespace MVCPractice.Controllers
 {
     public class DependencyExampleController : Controller
     {
-        private IEmployeeData _employee = null;
-        public DependencyExampleController(IEmployeeData _employee) 
+        private EmployeeData _employee = null;
+        public DependencyExampleController() 
         {
-           this._employee = _employee;
+           EmployeeData data = new EmployeeData();
 
         }
+        /*public DependencyExampleController(IEmployeeData _employee)
+        {
+            this._employee = _employee;
+
+        }*/
         // GET: DependencyExample
         public ActionResult Index()
         {
