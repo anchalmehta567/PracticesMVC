@@ -19,5 +19,12 @@ namespace Web.Models
         public string JobDescription { get; set; }
         public string Number { get; set; }
         public string Department { get; set; }
+        public decimal HourlyPay { get; set; }
+        public decimal Bonus { get; set; }
+        public int EmployeeTypeID { get; set; }
+        public Nullable<decimal> HouseAllowance { get; set; }
+        public Nullable<decimal> MedicalAllowance { get; set; }
+    
+        public virtual Employee_Type Employee_Type { get; set; }
     }
 }

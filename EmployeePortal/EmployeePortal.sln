@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{FC515D80-2DE0-4319-A9D6-C7225F2EDFCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{BB8D8B15-0DAF-4062-8102-CFFCDB679A82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loggerr", "Loggerr\Loggerr.csproj", "{ABEC77DC-61A9-42BF-AFB1-045FC1BC2183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{FC515D80-2DE0-4319-A9D6-C7225F2EDFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC515D80-2DE0-4319-A9D6-C7225F2EDFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC515D80-2DE0-4319-A9D6-C7225F2EDFCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB8D8B15-0DAF-4062-8102-CFFCDB679A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB8D8B15-0DAF-4062-8102-CFFCDB679A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB8D8B15-0DAF-4062-8102-CFFCDB679A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB8D8B15-0DAF-4062-8102-CFFCDB679A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEC77DC-61A9-42BF-AFB1-045FC1BC2183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEC77DC-61A9-42BF-AFB1-045FC1BC2183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEC77DC-61A9-42BF-AFB1-045FC1BC2183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEC77DC-61A9-42BF-AFB1-045FC1BC2183}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

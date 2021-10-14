@@ -30,7 +30,7 @@ namespace SingletonDemo
 
         private static void PrintEmployeeDetails()
         {
-            Singletone fromStudent = Singletone.GetInstance;
+            Singletone fromStudent = Singletone.GetInstance; 
             fromStudent.PrintDetails("From Student");
         }
 
