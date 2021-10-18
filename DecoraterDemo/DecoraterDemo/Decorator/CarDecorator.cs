@@ -9,10 +9,10 @@ namespace DecoraterDemo.Decorator
     public abstract class CarDecorator : ICar
     {
         private ICar car;
-        public CarDecorator(ICar _car) { car = _car; }
-        public string Make { get { return car.Make; } }
+        public CarDecorator(ICar _car) { this.car = _car; }
+        public virtual  string Make { get { return car.Make; } }
 
-        public double GetPrice()
+        public  virtual double GetPrice()
         {
             return car.GetPrice();
         }

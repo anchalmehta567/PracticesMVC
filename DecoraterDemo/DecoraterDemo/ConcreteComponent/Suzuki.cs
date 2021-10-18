@@ -8,7 +8,7 @@ namespace DecoraterDemo.ConcreteComponent
 {
  public    class Suzuki:ICar
     {
-        public string Make { get { return "HatchBack"; } }
+        public string Make { get { return "Back"; } }
         public double GetPrice()
         {
             return 800000;
