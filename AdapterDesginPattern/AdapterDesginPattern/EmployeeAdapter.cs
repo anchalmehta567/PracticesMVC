@@ -1,11 +1,12 @@
-﻿using AdapterDesignPatternExample.Target;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace AdapterDesignPatternExample.Adapter
+namespace AdapterDesginPattern
 {
-   public class EmployeeAdapter:ITarget
+    public class EmployeeAdapter : ITarget
     {
         ThirdPartyBillingSystem thirdPartyBillingSystem = new ThirdPartyBillingSystem();
 
@@ -39,6 +40,8 @@ namespace AdapterDesignPatternExample.Adapter
                 }
                 listEmployee.Add(new Employee(Convert.ToInt32(Id), Name, Designation, Convert.ToDecimal(Salary)));
             }
+            Console.WriteLine("Adapter converted Array of Employee to List of Employee");
+            Console.WriteLine("Then delegate to the ThirdPartyBillingSystem for processing the employee salary\n");
             thirdPartyBillingSystem.ProcessSalary(listEmployee);
         }
     }
