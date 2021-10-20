@@ -22,7 +22,19 @@ namespace CompositeDesginPattern
             IEmployee Bob = new Manager("BoB", "Head") { Subordinates = { James, Philip } };
 
             Bob.GetDetails();
+            Console.WriteLine("Example 2 ");
+         
+// Example 2
+            IComponent hd = new Leafs(4000, "HardDrive");
+            IComponent mouse = new Leafs(3000,"Mouse");
+            IComponent monitor = new Leafs(5000, "Monitor");
+            IComponent Cabinet = new Composites("Abc") { components = { hd } };
+
+            Cabinet.ShowPrice();
             Console.ReadLine();
+
+
+
         }
     }
 }
